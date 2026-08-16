@@ -17,11 +17,11 @@ html[data-language="en"] [data-lang="zh"], html[data-language="zh"] [data-lang="
 .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 11px; font-size: 1rem; font-weight: 590; letter-spacing: -.02em; }
 .brand b { font-weight: 800; }
 .brand-mark { position: relative; display: inline-block; width: 36px; height: 36px; overflow: hidden; border: 1px solid rgba(231, 247, 255, .48); border-radius: 11px; background: linear-gradient(155deg, #173551, #07121e); box-shadow: 0 9px 26px rgba(0, 0, 0, .38); }
-.brand-mark::before { position: absolute; z-index: 2; top: 7px; left: 8px; width: 14px; height: 14px; content: ""; background: var(--amber); border-radius: 50%; box-shadow: 0 0 22px rgba(255, 189, 104, .54); }
+.brand-mark::before { position: absolute; z-index: 2; top: 5px; left: 6px; width: 18px; height: 18px; content: ""; border: 1.5px solid var(--amber); border-radius: 50%; background: radial-gradient(circle at center, var(--amber) 0 2px, transparent 2.5px 6px, rgba(255, 189, 104, .72) 6px 7px, transparent 7.5px), linear-gradient(var(--amber), var(--amber)) center / 1px 100% no-repeat, linear-gradient(90deg, var(--amber), var(--amber)) center / 100% 1px no-repeat; box-shadow: 0 0 22px rgba(255, 189, 104, .54); }
 .brand-mark::after { position: absolute; inset: 17px -10px -8px; content: ""; background: linear-gradient(145deg, #1d7895, #0a3349 56%, #06101b 57%); transform: rotate(-8deg); }
 .brand-mark i { position: absolute; z-index: 3; right: 5px; bottom: 6px; width: 12px; height: 1px; background: var(--cyan); transform: rotate(-26deg); transform-origin: right center; }
 .brand-mark.small { width: 30px; height: 30px; border-radius: 9px; }
-.brand-mark.small::before { width: 11px; height: 11px; top: 6px; left: 7px; }
+.brand-mark.small::before { width: 14px; height: 14px; top: 4px; left: 5px; border-width: 1.2px; background: radial-gradient(circle at center, var(--amber) 0 1.6px, transparent 2px 4.6px, rgba(255, 189, 104, .72) 4.6px 5.5px, transparent 6px), linear-gradient(var(--amber), var(--amber)) center / 1px 100% no-repeat, linear-gradient(90deg, var(--amber), var(--amber)) center / 100% 1px no-repeat; }
 .brand-mark.small::after { inset: 14px -8px -7px; }
 .brand-mark.small i { right: 4px; bottom: 5px; width: 10px; }
 .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 5px; }
