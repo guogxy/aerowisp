@@ -1,0 +1,7 @@
+import type { ReactNode } from "react";
+import { SiteFooter, SiteHeader } from "./site-chrome";
+
+export type TocItem = { id: string; label: string };
+export function InfoPage({ eyebrow, eyebrowZh, title, titleZh, intro, introZh, meta, metaZh, toc, tocZh, children }: { eyebrow: string; eyebrowZh: string; title: string; titleZh: string; intro: string; introZh: string; meta?: string; metaZh?: string; toc?: TocItem[]; tocZh?: TocItem[]; children: ReactNode }) {
+  return <><SiteHeader /><main id="main-content"><section className="info-hero"><div className="wrap"><p className="eyebrow"><span data-lang="en">{eyebrow}</span><span data-lang="zh">{eyebrowZh}</span></p><h1><span data-lang="en">{title}</span><span data-lang="zh">{titleZh}</span></h1><p className="info-intro"><span data-lang="en">{intro}</span><span data-lang="zh">{introZh}</span></p>{meta && <div className="page-meta"><span className="pill" data-lang="en">{meta}</span><span className="pill" data-lang="zh">{metaZh}</span></div>}</div></section><div className="content-layout wrap"><article className="info-body">{children}</article>{toc && tocZh && <aside className="side-nav" aria-label="On this page"><div data-lang="en"><strong>On this page</strong>{toc.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</div><div data-lang="zh"><strong>本页内容</strong>{tocZh.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</div></aside>}</div></main><SiteFooter /></>;
+}
